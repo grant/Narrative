@@ -25,31 +25,38 @@ app.configure(function(){
 	app.use(app.router);
 	app.use(express.static(path.join(__dirname, 'public')));
 });
-/*
-app.post('/api/narrative', function (req, res) {
-	var body = req.param('body');
 
-	var doc = {body: body};
+app.post('/api/narrative/view', function (req, res) {
+	req.send('viewing narrative');
+});
+
+app.post('/api/narrative/add', function (req, res) {
+	var author = req.param('author');
+	var content = req.param('content');
+	var promptId = req.param('promptId');
+
+	var doc = {
+		author: author,
+		content: content,
+		promptId: promptId,
+		datetime: new Date(),
+		viewCount: 0
+	};
+
 	var uri = process.env.MONGOLAB_URI || 'mongodb://localhost:27017/mynarrative';
 	MongoClient.connect(uri, function (err, db) {
 		if (err) {
 			throw err;
 		}
-		var collection = db.collection('writings');
-		collection.count(doc, function(err, count) {
-			// if (!count) {
-			// 	collection.insert(doc, function(err, docs) {
-			// 		console.log('inserted');
-			// 	});
-			// } else {
-			// 	console.log('already inserted');
-			// }
+		var collection = db.collection('narratives');
+		collection.insert(doc, function(err, docs) {
+			console.log('inserted narrative');
 		});
 	});
 });
-*/
+
 app.get('*', function (req, res) {
-	res.send('hi');
+	res.send('yo');
 });
 
 http.createServer(app).listen(app.get('port'), function(){
