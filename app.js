@@ -25,7 +25,7 @@ app.configure(function(){
 	app.use(app.router);
 	app.use(express.static(path.join(__dirname, 'public')));
 });
-
+/*
 app.post('/api/narrative', function (req, res) {
 	var body = req.param('body');
 
@@ -47,7 +47,7 @@ app.post('/api/narrative', function (req, res) {
 		});
 	});
 });
-
+*/
 app.get('*', function (req, res) {
 	res.send('hi');
 });
