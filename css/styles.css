@@ -1,0 +1,20 @@
+/*Stype properties for Narrative creation page.
+
+*/
+
+h1 {
+	text-align: center;
+	margin-top: 2%;
+	font-weight: bold;
+	font-size: 45px;
+}
+
+.article-box {
+	max-width: 55%;
+	margin: 0 auto;
+	margin-top: 4%;
+}
+
+textarea {
+	border: 0px;
+}
