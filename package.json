@@ -1,0 +1,24 @@
+{
+  "name": "MyNarrative",
+  "version": "0.0.1",
+  "description": "Creative Writing",
+  "homepage": "http://mynarrative.co/",
+  "private": true,
+  "preferGlobal": false,
+  "scripts": {
+    "start": "node ./bin/http-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/granttimmerman/Narrative"
+  },
+  "keywords": [
+    "narrative"
+  ],
+  "dependencies" : {
+    "express": "*",
+    "mongodb": "*"
+  },
+  "engine": ">= 0.10.18",
+  "license": "MIT"
+}
