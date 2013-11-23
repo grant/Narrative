@@ -1,0 +1,6 @@
+bin/
+obj/
+*~
+*.swp
+node_modules
+.DS_STORE
