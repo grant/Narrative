@@ -14,6 +14,7 @@ body {
 button.btn {
     margin-top: 5px;
     margin-right: 3px;
+    text-align: left;
 }
 
 h1 {
@@ -27,6 +28,21 @@ h1, h3 {
 #backLink {
     font-size: 150%;
     margin-top: 20%;
+}
+
+#navRightButton {
+    margin-right: 40px;
+    margin-top: 8px;
+    width: 130px;
+}
+
+#navRightText {
+    margin-left: 25px;
+}
+
+#glyphAlign {
+    text-align: left;
+    margin-left: 5px;
 }
 
 .prompt-style {
