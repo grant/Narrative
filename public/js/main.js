@@ -18,10 +18,7 @@ function sendPost() {
 		promptId: 123
 	};
 
-	$.post({
-		url: 'api/narrative/add',
-		data: postData
-	}, function() {
+	$.post('api/narrative/add', postData, function() {
 
 	});
 }
