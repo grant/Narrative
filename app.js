@@ -94,7 +94,7 @@ app.get('/', function (req, res) {
 			var data = {prompt: randomPrompt};
 			res.render('home.hbs', randomPrompt);
 		});
-	});
+	}); 
 
 	//res.render('home.hbs');
 });
