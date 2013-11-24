@@ -21,15 +21,11 @@ h1 {
 }
 
 h1, h3 {
-    font-family: 'Georgia';
-    margin-left: 0;
-    color: #FFF;
-    text-shadow: 2px 2px 2px #000;
     font-family: 'Georgia';  
 }
 
 .prompt-style {
-    margin-top: 10%;
+    margin-top: 5%;
     margin-left: 0;
     color: #FFF;
     text-shadow: 2px 2px 2px #000;
@@ -86,11 +82,21 @@ form {
     margin-bottom: 0px;
     padding-bottom: 0;
     font-size: 80px;
+
+    margin-left: 0;
+    color: #FFF;
+    text-shadow: 2px 2px 2px #000;
+    font-family: 'Georgia'; 
 }
 
 .tagline {
     margin-top: -20px;
     padding-top: 0;
+
+    margin-left: 0;
+    color: #FFF;
+    text-shadow: 2px 2px 2px #000;
+    font-family: 'Georgia'; 
 }
 
 .navbar-header {
@@ -105,7 +111,7 @@ form {
     position: relative;
     margin-top: 0px;
     height: 400px;
-    min-width: 100px;
+    min-width: 100px5
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
