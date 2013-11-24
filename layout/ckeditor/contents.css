@@ -13,7 +13,8 @@ body
 	color: #333;
 
 	/* Remove the background color to make it transparent */
-	/*background-color: #fff;*/
+	background-color: #fff;
+	opacity: 0;
 
 	margin: 20px;
 }
