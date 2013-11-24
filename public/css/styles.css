@@ -25,6 +25,11 @@ form {
     height: 100%;
 }
 
+.box1 {
+    margin-top: 25%;
+    
+}
+
 .background2 {
 	background-image: url('../img/mount.jpeg');
 	background-repeat: no-repeat;
