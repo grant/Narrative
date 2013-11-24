@@ -68,7 +68,7 @@ app.get('/narratives', function (req, res) {
 				var prompt = prompts[i];
 				promptMap[prompt._id] = prompt;
 			}
-			db.collection('narratives').find().toArray(function(err, narratives) {
+			db.collection('narratives').find().sort({datetime: -1}).toArray(function(err, narratives) {
 				for (var i in narratives) {
 					var narrative = narratives[i];
 					if (promptMap[narrative.promptId]) {
