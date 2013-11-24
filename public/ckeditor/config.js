@@ -25,8 +25,10 @@ CKEDITOR.editorConfig = function( config ) {
 		{ name: 'about' }
 	];
 
-	//config.height = '500px';
-	//config.width = '400px';
+  	config.height = '30px'; 
+  	config.width = '30px';
+  	config.resize_enabled = false; //false says not resizable
+
 
 	// The default plugins included in the basic setup define some buttons that
 	// we don't want too have in a basic editor. We remove them here.

@@ -1,0 +1,82 @@
+<!--Narrative Home Page-->
+
+<!doctype html>
+<html>
+        <head>
+                <meta charset="UTF-8">
+                <meta name="description" content="Narrative">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <!-- <link href="assets/css/bootstrap-responsive.css" rel="stylesheet"> -->
+                <title>Narrative</title>
+                <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+                <link rel="stylesheet" type="text/css" href="css/styles.css">
+                <script src="ckeditor/ckeditor.js"></script>
+                <script src="ckeditor/config.js"></script>
+                <script src="js/sidemenu.js"></script>
+                <script src="js/bootstrap.min.js"></script>
+                
+        </head>
+        <body class="background2">
+                <div class="container">                      
+                        <nav class="navbar navbar-inverse navbar-fixed-top">
+                        <div class="navbar-header">
+                                <a class="navbar-brand" href="index.html">Narrative <!--<img src="img/logo.png" alt="Narrative logo" --></a>
+                        </div>
+                        </nav>
+                </div>
+
+                        <!--3 column grid -->
+                        <div class="row">
+                                <div class="col-md-4"></div>
+                                <div class="col-md-3"></div>
+                                <div class="col-md-5">
+                                    <!--Prompt Overlay -->
+                                    <span class="prompt"></span>
+                                        <h2>With one final stride...</h2>
+                                    <div class="article-box">
+
+                                        <form method="post" class="formControl">
+                                            <div id="editable" contenteditable="true">
+                                                <p>...
+                                            </div>
+                                            <script>
+                                                // Turn off automatic editor creation first.
+                                                CKEDITOR.disableAutoInline = true;
+                                                CKEDITOR.inline( 'editable' );
+                                            </script>
+
+                                            <!--<p>
+                                                <textarea id="editor1">Tell us your story...</textarea>
+                                                <script>
+                                                    CKEDITOR.replace( 'editor1', {
+                                                        toolbar: 'Basic'
+                                                    });
+                                                </script>
+                                            </p>
+                                            <p>
+                                                <input type="submit">
+                                            </p>
+                                        -->
+                                        </form>
+                                    </div>
+                                    <button type="button" class="btn btn-primary btn-lg">Inspire Me</button> 
+                                    <div class="btn-group">
+                                      <button type="button" class="btn btn-danger dropdown-toggle btn-lg" data-toggle="dropdown">
+                                        I'm Stuck<span class="caret"></span>
+                                      </button>
+                                      <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">Quote</a></li>
+                                        <li><a href="#">Picture</a></li>
+                                      </ul>
+                                    </div>
+                                </div>
+                        </div>
+                </div>     
+        <script>
+            var data = CKEDITOR.instances.editable.getData();
+
+             // Your code to save "data", usually through Ajax.
+        </script>                 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+</html>
