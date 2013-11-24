@@ -56,8 +56,16 @@ app.post('/api/narrative/add', function (req, res) {
 	});
 });
 
+app.get('/narratives', function (req, res) {
+	res.render('narratives.hbs');
+});
+
+app.get('/reading', function (req, res) {
+	res.render('reading.hbs');
+});
+
 app.get('/', function (req, res) {
-	res.render('narrative.hbs');
+	res.render('home.hbs');
 });
 
 http.createServer(app).listen(app.get('port'), function(){
