@@ -44,7 +44,7 @@ textarea {
 .photo {
 
     position: relative;
-    margin-top: 20px;
+    margin-top: 0px;
 }
 .description {
     background-color: #000000;
@@ -76,4 +76,5 @@ textarea {
 .middlenav {
   margin-top:  65px;
   padding-left: 20px;
+  padding-bottom: 20px;
 }
