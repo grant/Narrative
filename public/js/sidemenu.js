@@ -7,7 +7,7 @@
     });
 
 
-    $('#another-thing-that-opens-an-alert').click(function () {
+    $('.changeButton').click(function () {
     $('#alert2').addClass('in'); // shows alert with Bootstrap CSS3 implem
     });
     
@@ -15,9 +15,6 @@
       $(this).parent().removeClass('in'); // hides alert with Bootstrap CSS3 implem
     });
 
-    $('.changeButton').click(function() {
-    	ChangeIt();
-    });
 
     
     $(function(){
