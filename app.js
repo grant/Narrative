@@ -71,10 +71,8 @@ app.get('/narratives', function (req, res) {
 					narrative.prompt = promptMap[narrative.promptId].prompt;
 					narrative.imageURL = promptMap[narrative.promptId].imageURL;
 				}
-				console.log(narratives);
 				var data = {narratives: narratives};
 				res.render('narratives.hbs', data);
-				db.close();
 			});
 		});
 	});
