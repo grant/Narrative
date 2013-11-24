@@ -80,7 +80,9 @@
 
     $('#the-thing-that-opens-your-alert').click(function(){
         if (prompt == 0){
-            var num = Math.ceil(Math.random() * 2);
+            alert1();
+            prompt = 2;
+            /*var num = Math.ceil(Math.random() * 2);
             if ( num == 1) {
                 alert1();
                 prompt = 2;
@@ -88,7 +90,7 @@
             else if (num == 2) {
                 alert2();
                 prompt = 1;
-            }
+            }*/
         }
         else {
             if ( prompt == 1) {
@@ -120,36 +122,6 @@
         $('.publishButton').click(function(){
             $('.publish-modal').modal();
         }); //cancel-signup click
-
-        $('#publish-form').validate(
-        {
-        rules: {
-            name: {
-                minlength: 2,
-                required: true
-            },
-            email: {
-                required: true,
-                email: true
-            },
-            subject: {
-                minlength: 2,
-                required: true
-            },
-            message: {
-                minlength: 2,
-                required: true
-                }
-        },
-        highlight: function(element) {
-            $(element).closest('.control-group').removeClass('success').addClass('error');
-        },
-        success: function(element) {
-            element
-            .text('OK!').addClass('valid')
-            .closest('.control-group').removeClass('error').addClass('success');
-            }
-        });
     });
 
 
