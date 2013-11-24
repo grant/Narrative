@@ -2,7 +2,6 @@
 @font-face { font-family: Calluna; src: url('Calluna.otf'); }
 @font-face { font-family: Georgia}
 
-
 html, body {
     height: 100%;
     font-family: 'Georgia';
@@ -22,7 +21,7 @@ h1, h3 {
 }
 
 h2 {
-    margin-top: 15%;
+    margin-top: 10%;
     margin-left: 0;
     font-family: 'Georgia';
 }
@@ -36,8 +35,8 @@ form {
 }
 
 .box1 {
-    margin-top: 25%;
-    
+    margin-top: 41%;
+}
 
 .background2 {
 	/*background-image: url('../img/mount.jpeg');*/
@@ -56,7 +55,6 @@ form {
 .article-box {
     min-height: 300px;
     height: 100%;
-
 	background-color: #FFF;
 	opacity: 0.7;
 	padding: 10px;
@@ -75,7 +73,6 @@ form {
     margin-top: 0px;
     height: 400px;
     min-width: 100px;
-    background-image: url('../img/pic.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
