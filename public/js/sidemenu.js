@@ -35,7 +35,7 @@
 	function ChangeIt() {
     	var totalCount = 18;
         var num =  Math.ceil( Math.random() * totalCount );
-        document.body.background = '../img/cover/00'+num+'.jpg';
+        document.body.background = 'https://s3.amazonaws.com/narrativeBlob/images/00'+num+'.jpg';
         document.body.style.backgroundColor = "black";
     }
 
