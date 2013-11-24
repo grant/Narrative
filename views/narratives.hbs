@@ -14,7 +14,7 @@
         <div class="container">
             <nav class="navbar navbar-inverse navbar-fixed-top">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="index.html">narrative. <!--<img src="img/logo.png" alt="Narrative logo" --></a>
+                    <a class="navbar-brand" href="/">narrative. <!--<img src="img/logo.png" alt="Narrative logo" --></a>
                 </div>
                 <button type="button" id="navRightButton" class="btn btn-default navbar-right">
                     <span class="glyphicon glyphicon-pencil" id="glyphAlign"></span><span id="navRightText">Compose</span>
@@ -35,20 +35,20 @@
                             {{#each narratives}}
                             <li class="list-group-item">
                                 <div class="row">
-                                    <div class="col-xs-4 col-md-2">
+                                    <div class="col-xs-4 col-md-4">
                                         <img src="{{thumbURL}}" class="img-thumbnail img-responsive thumbnail" alt="" />
                                     </div>
-                                    <div class="col-xs-8 col-md-10">
+                                    <div class="col-xs-8 col-md-8">
                                         <div>
-                                            <a href="/{{promptId}}">{{title}}</a>
-                                            <div class="mic-info">
-                                                By: <a href="#">{{author}}</a> on {{date}}
+                                            <a href="/{{promptId}}" class="title">{{title}}</a>
+                                            <div class="mic-info author">
+                                                By <em>{{author}}</em> on {{date}}
                                             </div>
                                         </div>
-                                        <div class="comment-text">
+<!--                                         <div class="comment-text">
                                             Awesome design
                                         </div>
-                                    </div>
+ -->                                    </div>
                                 </div>
                             </li>
                             {{/each}}
