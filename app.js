@@ -75,6 +75,7 @@ app.get('/narratives', function (req, res) {
 						narrative.prompt = promptMap[narrative.promptId].prompt;
 						narrative.imageURL = promptMap[narrative.promptId].imageURL;
 						narrative.thumbURL = promptMap[narrative.promptId].imageURL;
+						narrative.date = getFormattedDate(narrative.datetime);
 					} else {
 						delete narrative;
 					}
@@ -104,11 +105,16 @@ app.get('/', function (req, res) {
 	//res.render('home.hbs');
 });
 
+app.get('/about', function (req, res) {
+	res.render('about.hbs');
+});
+
 app.get('/:id', function (req, res) {
 	var uri = process.env.MONGOLAB_URI || 'mongodb://localhost:27017/mynarrative';
 	MongoClient.connect(uri, function (err, db) {
 		db.collection('narratives').find({promptId: req.params.id}).toArray(function(err, narratives) {
 			var data = narratives[0];
+			data.date = getFormattedDate(data.datetime);
 			res.render('reading.hbs', data);
 		});
 	});
@@ -117,3 +123,11 @@ app.get('/:id', function (req, res) {
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
+
+function getFormattedDate (date) {
+	var newDate = new Date(date);
+	var curr_date = newDate.getDate();
+    var curr_month = newDate.getMonth() + 1; //Months are zero based
+    var curr_year = newDate.getFullYear();
+    return curr_month + "/" + curr_date + "/" + curr_year;
+}
