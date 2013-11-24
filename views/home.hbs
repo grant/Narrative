@@ -64,27 +64,25 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h4 class="modal-title">Share your story with the world.</h4>
+                        <h2 class="modal-title">Share your story with the world.</h2>
                     </div>
                     <div class="modal-body">
-                        <p>
+                        <form role="form">
                         <div class="form-group">
-                            <label class="col-lg-2 control-label" for="first-name">Title</label>
-                            <div class="col-lg-5">
-                                <input type="text" class="form-control" name="title" id="title" placeholder="Name your story" required>
-                            </div>
-
-                            <label class="col-lg-2 control-label" for="first-name">Name</label>
-                            <div class="col-lg-5">
-                                <input type="text" class="form-control" name="name" id="name" placeholder="Sign your work" required>
-                            </div>
-
+                          <label for="inputTitle">Title</label>
+                          <input type="text" class="form-control" id="inputTitle" placeholder="Name your story" required>
                         </div>
-                        </p>
+                        <div class="form-group">
+
+                          <label for="inputName">Name</label>
+                          <input type="name" class="form-control" id="name" placeholder="Sign your work" required>
+                        </div>
+                        
+                      </form>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">No, Go Back to Signup Form</button>
-                        <button type="button" class="btn btn-primary btn-abandon">Yes, Get Me Out of Here!</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-default btn-abandon">Publish</button>
                     </div>
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->

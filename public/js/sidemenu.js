@@ -20,15 +20,18 @@
     });
 
     
+    $(function(){
+        //Prompts modal dialog
+        $('.publishButton').click(function(){
+                $('.publish-modal').modal();
+            }); //cancel-signup click
 
-    //Prompts modal dialog
-    $('.publishButton').click(function(){
-            $('.publishButton-modal').modal();
-        }); //cancel-signup click
+        $('.btn-abandon').click(function(){
+            window.location = 'http://mynarrative.co/narratives';
+        }); //Redirects to Google
 
-    $('.btn-abandon').click(function(){
-        window.location = 'http://www.google.com';
-    }); //Redirects to Google
+    });
+
 
 
 
