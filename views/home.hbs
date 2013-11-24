@@ -32,20 +32,22 @@
                     </div>
                 </form>
                 </div>
-                <button type="button" class="btn btn-primary btn-lg">Inspire Me</button>
-                <div class="btn-group">
-                  <button type="button" class="btn btn-danger dropdown-toggle btn-lg" data-toggle="dropdown">
-                    I'm Stuck<span class="caret"></span>
-                  </button>
-                  <ul class="dropdown-menu" role="menu">
-                    <li><a href="#">Quote</a></li>
-                    <li><a href="#">Picture</a></li>
-                  </ul>
-                </div>
-                <button type="button" class="btn btn-success btn-lg publishButton">Publish</button>
+                <button type="button" class="btn btn-success btn-lg publishButton" name="publish">Publish</button>
+                <button type="button" class="btn btn-primary btn-lg" id="the-thing-that-opens-your-alert" >I'm Stuck</button>
             </div>
 
-            <div class="col-md-3"></div>
+            <div class="col-md-3"> 
+                <div class="box1">         
+                    <div id="alert" class="alert alert-info fade">
+                      <button href="#" type="button" class="close">&times;</button>
+                      <h3>Here are some quotes to help you along...</h3>
+                      <span class="helpfulquotes"></span>
+                      <p>Roses are red, violets are blue...</p>
+                      <p>Narrative is the best project at Startup Weekend</p>
+                      <p>If I had a child, I would name it narrative</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
