@@ -11,6 +11,10 @@ body {
     /*transition: background-image 1s ease-in-out;*/
 }
 
+#navbarLogo {
+    color: white;
+}
+
 button.btn {
     margin-top: 5px;
     margin-right: 3px;
