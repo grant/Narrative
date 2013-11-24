@@ -29,15 +29,17 @@
         <div class="row">
             <div class="col-md-2"></div>
             <div class="col-md-8">
-                <div class="photo">
-                    <!--<img class="pic" src="img/pic.jpg" height="400" width="800" alt="temporary picture"></img>-->
-                    <div class="description">
-                        <span class="description_content_left">
-                             She opened the door and thought...
-                        </span>
-                        <span class="description_content_right">Vinny Pasceri<br />11/22/2013</span>
-                    </div>
-                </div>
+                <ul class="photos">
+                    {{#each narratives}}
+                    <li class="photo">
+                        <!--<img class="pic" src="img/pic.jpg" height="400" width="800" alt="temporary picture"></img>-->
+                        <div class="description">
+                            <span class="description_content_left">{{prompt}}</span>
+                            <span class="description_content_right">{{author}}<br />{{date}}</span>
+                        </div>
+                    </li>
+                    {{/each}}
+                </ul>
             </div>
             <div class="col-md-2"></div>
         </div>

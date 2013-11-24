@@ -53,8 +53,11 @@ form {
 	font-size: 23px;
 }
 
-.photo {
 
+.photos {
+    list-style-type: none;
+}
+.photo {
     position: relative;
     margin-top: 0px;
     height: 400px;
@@ -100,11 +103,8 @@ form {
 
 .lowerright {
     margin-top: 11%;
-<<<<<<< HEAD:layout/css/styles.css
 }
 
 .formControl {
     height: 500px;
-=======
->>>>>>> 918b8b1d1b8d33c18f43f18fd7fa96fbe0453be0:public/css/styles.css
 }
