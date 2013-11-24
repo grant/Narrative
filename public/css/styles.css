@@ -1,7 +1,29 @@
-/*Stype properties for Narrative creation page.
+/*Stype properties for Narrative creation page.*/
+html, body {
+    height: 100%;
+}
 
-*/
-@font-face { font-family: Calluna; src: url('Calluna.otf'); } 
+@font-face { font-family: Calluna; src: url('Calluna.otf'); }
+
+button.btn {
+    margin-top: 5px;
+    margin-right: 3px;
+}
+
+h2 {
+    margin-top: 15%;
+    margin-left: 0;
+    font-family: 'Calluna';
+}
+
+p {
+    font-family: 'Calluna';
+    opacity: 1.0;
+}
+
+form {
+    height: 100%;
+}
 
 .background2 {
 	background-image: url('../img/mount.jpeg');
@@ -13,48 +35,23 @@
 	position: relative;
 }
 
-body {
-    heiht: 100%;
+.row {
+    padding: 0 30px;
 }
 
-html {
-    height: 100%;
-}
-  
 .article-box {
-	width:600px;
-  	height:500px;
+    min-height: 500px;
+    height: 100%;
 
 	background-color: #FFF;
 	opacity: 0.7;
 	padding: 10px;
-} 
-
-button.btn.btn-primary {
-	margin-top: 5px;
-    margin-right: 3px;
-}
-
-button.btn.btn-danger {
-    margin-top: 5px;
-}
-
-h2 {
-	margin-top: 15%;
-	margin-left: 0;
-	font-family: 'Calluna';
-}
-
-p {
-	font-family: 'Calluna';
-	opacity: 1.0;
 }
 
 .navbar-brand {
 	font-family: 'Calluna';
 	font-size: 23px;
 }
-
 
 .photo {
 
@@ -103,6 +100,4 @@ p {
 
 .lowerright {
     margin-top: 11%;
-
-
 }

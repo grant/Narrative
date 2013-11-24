@@ -27,7 +27,7 @@ function createWordTree () {
 	for (var i = 0; i < words.length; ++i) {
 		addWord(words[i]);
 	}
-	// console.log(recommendWord('aa', 100));
+	console.log(recommendWord('aa', 100));
 }
 
 function addWord(word) {
@@ -69,6 +69,7 @@ function getWords (startOfWord, branch, numWords) {
 			numWords -= newWords.length;
 		}
 	}
+	console.log(startOfWord);
 	return words;
 }
 
