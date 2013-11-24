@@ -31,7 +31,7 @@ form {
 }
 
 .background2 {
-	background-image: url('../img/mount.jpeg');
+	/*background-image: url('../img/mount.jpeg');*/
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
