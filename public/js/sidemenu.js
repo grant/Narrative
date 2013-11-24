@@ -96,6 +96,7 @@
 
     function alert1 () {
         $('#alert').addClass('in');
+        $('.helpfulquotes') 
     }
 
     function alert2 () {
@@ -124,5 +125,3 @@
         document.body.background = 'https://s3.amazonaws.com/narrativeBlob/images/00'+num+'.jpg';
         document.body.style.backgroundColor = "black";
     }
-
-    ChangeIt();
