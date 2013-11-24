@@ -10,103 +10,105 @@
         <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="css/styles.css">
     </head>
-    <body class="background2">
-        <div class="container">
-            <nav class="navbar navbar-inverse navbar-fixed-top">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="index.html">
-                        narrative. <!--<img src="img/logo.png" alt="Narrative logo" -->
-                    </a>
-                </div>
-            </nav>
-        </div>
-        <!--3 column grid -->
-        <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-9">
-                <div class="intro">
-                    <h1>Welcome to Narrative.</h1>
-                </div>
-                <div class="tagline">
-                    <h3>A fun way to write a story and share them.</h3>
-                </div>
-
-                <!--Prompt Overlay -->
-                <h2 class="prompt-style">With one final stride...</h2>
-                <div class="article-box">
-                    <form method="post">
-                        <div id="editable" contenteditable="true">
-                            <p>...</p>
+    <body>
+        <div class="background2" style="background-image:url('{{imageURL}}')">
+            <div class="container">
+                <nav class="navbar navbar-inverse navbar-fixed-top">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="index.html">
+                            narrative. <!--<img src="img/logo.png" alt="Narrative logo" -->
+                        </a>
+                    </div>
+                </nav>
+            </div>
+            <!--3 column grid -->
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="intro">
+                            <h1>Welcome to Narrative.</h1>
                         </div>
-                    </form>
-                </div>
-                <button type="button" class="btn btn-success btn-lg publishButton" name="publish">Publish</button>
-                <button type="button" class="btn btn-primary btn-lg" id="the-thing-that-opens-your-alert" >I'm Stuck</button>
-            </div>
-            
-            <div class="col-md-3">
-                <div class="box1">
-                    <div id="alert" class="alert alert-info fade">
-                        <button href="#" type="button" class="close">&times;</button>
-                        <h3>Here are some quotes to help you along...</h3>
-                        <span class="helpfulquotes"></span>
-                        <p>Roses are red, violets are blue...</p>
-                        <p>Narrative is the best project at Startup Weekend</p>
-                        <p>If I had a child, I would name it narrative</p>
-                        <br />
-                        <!--<h4><a class="alert changeButton" href="#">I Still Need Help</a></h4>-->
-                    </div>
-                    <!--<div id="alert2" class="alert alert-success fade">
-                        <button href="#" type="button" class="close">&times;</button>
-                        <h3>Think About this...</h3>
-                        <p>How does this new picture incorperate with your narrative?</p>
-                        </div>-->
-                    <div id="alert2" class="alert alert-success fade">
-                        <button href="#" type="button" class="close">&times;</button>
-                        <h3>Use these words in your next paragraph</h3>
-                        <span class="helpfulwords"></span>
-                        <ul>
-                            <li>Enterprise</li>
-                            <li>Failure</li>
-                            <li>Amazement</li>
-                            <li>Gituhub</li>
-                            <li>Narative</li>
-                        </ul>
-                        <!--<h4><a class="alert changeButton2" href="#">I Still Need Help</a></h4>-->
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
-    </div>
+                        <div class="tagline">
+                            <h3>A fun way to write a story and share them.</h3>
+                        </div>
+                        <!--Prompt Overlay -->
+                        <h2 class="prompt-style">With one final stride...</h2>
+                        <div class="article-box">
+                            <form method="post">
+                                <div id="editable" contenteditable="true">
+                                    <p>...</p>
+                                </div>
+                            </form>
+                        </div>
+                        <button type="button" class="btn btn-success btn-lg publishButton" name="publish">Publish</button>
+                        <button type="button" class="btn btn-primary btn-lg" id="the-thing-that-opens-your-alert" >I'm Stuck</button>
 
-    <div class="modal fade publish-modal">
-        <div class="modal-dialog">
-        <div class="modal-content">
-        <div class="modal-header">
-            <h2 class="modal-title">Share your story with the world.</h2>
-        </div>
-        <div class="modal-body">
-            <form role="form">
-                <div class="form-group">
-                    <label for="inputTitle">Title</label>
-                    <input type="text" class="form-control" id="inputTitle" placeholder="Name your story" required>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="box1">
+                            <div id="alert" class="alert alert-info fade">
+                                <button href="#" type="button" class="close">&times;</button>
+                                <h3>Here are some quotes to help you along...</h3>
+                                <span class="helpfulquotes"></span>
+                                <p>Roses are red, violets are blue...</p>
+                                <p>Narrative is the best project at Startup Weekend</p>
+                                <p>If I had a child, I would name it narrative</p>
+                                <br />
+                                <!--<h4><a class="alert changeButton" href="#">I Still Need Help</a></h4>-->
+                            </div>
+                            <!--<div id="alert2" class="alert alert-success fade">
+                                <button href="#" type="button" class="close">&times;</button>
+                                <h3>Think About this...</h3>
+                                <p>How does this new picture incorperate with your narrative?</p>
+                                </div>-->
+                            <div id="alert2" class="alert alert-success fade">
+                                <button href="#" type="button" class="close">&times;</button>
+                                <h3>Use these words in your next paragraph</h3>
+                                <span class="helpfulwords"></span>
+                                <ul>
+                                    <li>Enterprise</li>
+                                    <li>Failure</li>
+                                    <li>Amazement</li>
+                                    <li>Gituhub</li>
+                                    <li>Narative</li>
+                                </ul>
+                                <!--<h4><a class="alert changeButton2" href="#">I Still Need Help</a></h4>-->
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="inputName">Name</label>
-                    <input type="name" class="form-control" id="name" placeholder="Sign your work" required>
+            </div>
+        </div>
+        <div class="modal fade publish-modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title">Share your story with the world.</h2>
+                    </div>
+                    <div class="modal-body">
+                        <form role="form">
+                            <div class="form-group">
+                                <label for="inputTitle">Title</label>
+                                <input type="text" class="form-control" id="inputTitle" placeholder="Name your story" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputName">Name</label>
+                                <input type="name" class="form-control" id="name" placeholder="Sign your work" required>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-default btn-abandon">Publish</button>
+                    </div>
                 </div>
-            </form>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
         </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-            <button type="button" class="btn btn-default btn-abandon">Publish</button>
+        <!-- /.modal -->
         </div>
-                 
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-
+    </body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="ckeditor/ckeditor.js"></script>
     <script src="ckeditor/config.js"></script>
