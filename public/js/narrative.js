@@ -18,4 +18,8 @@ $(function() {
             window.location = '/narratives';
 		});
 	});
+
+	$('.article-box').click(function() {
+		CKEDITOR.instances.editable.focus();
+	});
 });
