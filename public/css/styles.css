@@ -35,7 +35,8 @@ form {
 }
 
 .box1 {
-    margin-top: 41%;
+    margin-top: 10%;
+    margin-left: 0;
 }
 
 .background2 {
@@ -61,6 +62,7 @@ form {
 }
 
 .navbar-brand {
+    font-family: 'Calluna';
 	font-size: 23px;
 }
 
