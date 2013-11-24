@@ -128,7 +128,7 @@ form {
 }
 
 footer {
-    height: 60px; 
+    height: 60px;
     margin-top: 3%;
     margin-left: -20px;
 }
@@ -136,8 +136,6 @@ footer {
 .fb-share-button {
     margin-bottom: 20px;
 }
-
-
 
 .photos {
     list-style-type: none;

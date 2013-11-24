@@ -110,7 +110,6 @@ app.get('/read/:id', function (req, res) {
 	MongoClient.connect(uri, function (err, db) {
 		db.collection('narratives').find({promptId: req.params.id}).toArray(function(err, narratives) {
 			var data = narratives[0];
-			console.log(data);
 			data.date = getFormattedDate(data.datetime);
 			res.render('reading.hbs', data);
 		});
