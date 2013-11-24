@@ -16,6 +16,10 @@ button.btn {
     margin-right: 3px;
 }
 
+h1 {
+    font-size: 80px;
+}
+
 h1, h3 {
     font-family: 'Georgia';
 }
@@ -70,6 +74,15 @@ form {
 .navbar-brand {
     font-family: 'Calluna';
 	font-size: 23px;
+}
+
+.intro {
+    margin-top: 10%;
+    font-size: 80px;
+}
+
+.tagline {
+    margin-top: 
 }
 
 .navbar-header {
