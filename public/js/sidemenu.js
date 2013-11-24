@@ -80,7 +80,9 @@
 
     $('#the-thing-that-opens-your-alert').click(function(){
         if (prompt == 0){
-            var num = Math.ceil(Math.random() * 2);
+            alert1();
+            prompt = 2;
+            /*var num = Math.ceil(Math.random() * 2);
             if ( num == 1) {
                 alert1();
                 prompt = 2;
@@ -88,7 +90,7 @@
             else if (num == 2) {
                 alert2();
                 prompt = 1;
-            }
+            }*/
         }
         else {
             if ( prompt == 1) {

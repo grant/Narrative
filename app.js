@@ -123,7 +123,7 @@ http.createServer(app).listen(app.get('port'), function(){
 
 function getFormattedDate (date) {
 	var newDate = new Date(date);
-    return formatDate(newDate, "dddd h:mmtt MMM d yyyy");
+    return formatDate(newDate, "dddd h:mmtt MMM d, yyyy");
 }
 
 function formatDate(date, format, utc) {
