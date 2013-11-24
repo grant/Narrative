@@ -10,6 +10,9 @@ html, body {
 body {
     /*transition: background-image 1s ease-in-out;*/
 }
+#footerBar {
+    text-align: left;
+}
 
 #navbarLogo {
     color: white;
