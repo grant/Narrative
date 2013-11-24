@@ -1,5 +1,7 @@
 // Constants
-var DICTIONARY_FILE = 'raw_data/smalldictionary.txt';
+var END_OF_STRING_CHAR = '!';
+var DICTIONARY_FILE = 'raw_data/microdictionary.txt';
+// var DICTIONARY_FILE = 'raw_data/smalldictionary.txt';
 // var DICTIONARY_FILE = 'raw_data/dictionary.txt';
 
 // Start
@@ -25,8 +27,7 @@ function createWordTree () {
 	for (var i = 0; i < words.length; ++i) {
 		addWord(words[i]);
 	}
-	console.log(wordTree);
-	console.log(getBranch('aal'));
+	// console.log(recommendWord('aa', 100));
 }
 
 function addWord(word) {
@@ -35,7 +36,7 @@ function addWord(word) {
 
 function addWordPart(tree, wordPart) {
 	if (wordPart.length === 0) {
-		tree["!"] = true; // Arbitrary EOF code for word
+		tree[END_OF_STRING_CHAR] = true;
 	} else {
 		var charIndex = 0;
 		var character = wordPart.charAt(charIndex);
@@ -50,9 +51,29 @@ function recommendWord(startOfWord, numWords) {
 	var recommendedWords = [];
 	var branch = getBranch(startOfWord);
 	if (branch) {
-
+		getWords(startOfWord, branch, numWords);
 	}
 	return recommendedWords;
+}
+
+function getWords (startOfWord, branch, numWords) {
+	var words = [];
+	if (branch && typeof branch !== 'boolean') {
+		if (!!branch[END_OF_STRING_CHAR]) {
+			words.push(startOfWord);
+		}
+		var keys = Object.keys(branch);
+		for(var i = 0; i < keys, numWords > 0; ++i) {
+			var newWords = getWords(startOfWord + keys[i], branch[keys[i]], numWords);
+			words = words.concat(newWords);
+			numWords -= newWords.length;
+		}
+	}
+	return words;
+}
+
+function isWord(word) {
+	return !!getBranch(word)[END_OF_STRING_CHAR];
 }
 
 function getBranch(startOfWord) {
