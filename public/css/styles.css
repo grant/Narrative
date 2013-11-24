@@ -27,7 +27,7 @@ form {
 
 .box1 {
     margin-top: 25%;
-    
+
 }
 
 .background2 {
@@ -67,7 +67,6 @@ form {
     margin-top: 0px;
     height: 400px;
     min-width: 100px;
-    background-image: url('../img/pic.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
