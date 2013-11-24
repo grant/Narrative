@@ -8,6 +8,7 @@
         <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
         <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link rel="stylesheet" type="text/css" href="css/narratives.css">
     </head>
     <body>
         <div class="container">
@@ -19,28 +20,41 @@
             </nav>
         </div>
 
-        <div class="middlenav">
-            <ul class="nav nav-pills">
-              <li class="active"><a href="#">Latest</a></li>
-              <li><a href="#">Popular</a></li>
-              <li><a href="#">My Narratives</a></li>
-            </ul>
-        </div>
-        <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-md-8">
-                <ul class="photos">
-                    {{#each narratives}}
-                    <li class="photo" style='background-image:"{{imageURL}}"'>
-                        <div class="description">
-                            <span class="description_content_left">{{prompt}}</span>
-                            <span class="description_content_right">{{author}}<br />{{date}}</span>
-                        </div>
-                    </li>
-                    {{/each}}
-                </ul>
+        <div class="container mainContent">
+            <div class="row">
+                <div class="panel panel-default widget">
+                    <div class="panel-heading">
+                        <span class="glyphicon glyphicon-comment"></span>
+                        <h3 class="panel-title">
+                            Recent Narratives</h3>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="list-group">
+                            {{#each narratives}}
+                            <li class="list-group-item">
+                                <div class="row">
+                                    <div class="col-xs-4 col-md-2">
+                                        <img src="{{thumbURL}}" class="img-thumbnail img-responsive thumbnail" alt="" />
+                                    </div>
+                                    <div class="col-xs-8 col-md-10">
+                                        <div>
+                                            <a href="http://www.jquery2dotnet.com/2013/10/google-style-login-page-desing-usign.html">{{title}}</a>
+                                            <div class="mic-info">
+                                                By: <a href="#">{{author}}</a> on {{date}}
+                                            </div>
+                                        </div>
+                                        <div class="comment-text">
+                                            Awesome design
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-2"></div>
         </div>
+
     </body>
 </html>

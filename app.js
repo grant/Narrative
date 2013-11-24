@@ -54,6 +54,7 @@ app.post('/api/narrative/add', function (req, res) {
 		var collection = db.collection('narratives');
 		collection.insert(doc, function(err, docs) {
 			console.log('inserted narrative');
+			res.send('Good');
 		});
 	});
 });
@@ -67,12 +68,13 @@ app.get('/narratives', function (req, res) {
 				var prompt = prompts[i];
 				promptMap[prompt._id] = prompt;
 			}
-			db.collection('narratives').find().toArray(function(err, narratives) {
+			db.collection('narratives').find().sort({datetime: -1}).toArray(function(err, narratives) {
 				for (var i in narratives) {
 					var narrative = narratives[i];
 					if (promptMap[narrative.promptId]) {
 						narrative.prompt = promptMap[narrative.promptId].prompt;
 						narrative.imageURL = promptMap[narrative.promptId].imageURL;
+						narrative.thumbURL = promptMap[narrative.promptId].imageURL;
 					} else {
 						delete narrative;
 					}

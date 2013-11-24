@@ -12,7 +12,9 @@ $(function() {
 			content: content
 		};
 
-		$.post('api/narrative/add', postData, function() {
+		console.log('posting');
+		$.post('api/narrative/add', postData, function(data) {
+			console.log(data);
             window.location = '/narratives';
 		});
 	});
