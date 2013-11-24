@@ -35,14 +35,17 @@ app.post('/api/narrative/add', function (req, res) {
 	var author = req.param('author');
 	var content = req.param('content');
 	var promptId = req.param('promptId');
+	var title = req.param('title');
 
 	var doc = {
+		title: title,
 		author: author,
 		content: content,
 		promptId: promptId,
 		datetime: new Date(),
 		viewCount: 0
 	};
+	console.log('going to add narrative');
 
 	var uri = process.env.MONGOLAB_URI || 'mongodb://localhost:27017/mynarrative';
 	MongoClient.connect(uri, function (err, db) {

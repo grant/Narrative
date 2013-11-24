@@ -111,8 +111,8 @@
             }); //cancel-signup click
 
         $('.btn-abandon').click(function(){
-            window.location = 'http://mynarrative.co/narratives';
-        }); //Redirects to Google
+            window.location = '/narratives';
+        });
 
     });
 
@@ -125,3 +125,4 @@
         document.body.background = 'https://s3.amazonaws.com/narrativeBlob/images/00'+num+'.jpg';
         document.body.style.backgroundColor = "black";
     }
+

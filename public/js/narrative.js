@@ -3,10 +3,11 @@ $(function() {
     CKEDITOR.disableAutoInline = true;
     CKEDITOR.inline('editable');
 
-	$('.publishButton').click(function() {
+	$('.finalPublishButton').click(function() {
 		var content = CKEDITOR.instances.editable.getData();
 		var postData = {
-			author: 'Grant Timmerman',
+			title: $('.titleName').val(),
+			author: $('.authorName').val(),
 			content: content,
 			promptId: 123
 		};
