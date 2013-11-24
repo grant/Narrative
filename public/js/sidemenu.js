@@ -2,53 +2,59 @@
     $('.changeButton2').click(function () {
       $('#alert').addClass('in'); // shows alert with Bootstrap CSS3 implem
     });
-    
+
     $('.close').click(function () {
         prompt = 0;
       $(this).parent().removeClass('in'); // hides alert with Bootstrap CSS3 implem
     });
 
-    var words = new Array();
-        words[0] = "Contemplate";
-        words[1] = "Brandish";
-        words[2] = "Zip";
-        words[3] = "Vanish";
-        words[4] = "Itch";
-        words[5] = "dangle";
-        words[6] = "Resemble";
-        words[7] = "Terrorize";
-        words[8] = "Escape";
-        words[9] = "Fix";
-        words[10] = "Vortex";
-        words[11] = "Meaning";
-        words[12] = "Moonlight";
-        words[13] = "Event";
-        words[14] = "Music";
-        words[15] = "Cobweb";
-        words[16] = "Hook";
-        words[17] = "Feather";
-        words[18] = "Wilderness";
-        words[19] = "Volcano";
-        words[20] = "Futile";
-        words[21] = "Remarkable";
-        words[22] = "Ridiculous";
-        words[23] = "Fundamental";
-        words[24] = "Scary";
-        words[25] = "Skeptical";
-        words[26] = "Sneaky";
-        words[27] = "Idyllic";
-        words[28] = "Transparent";
-        words[29] = "Uncomfortable";
-        words[30] = "Dramatically";
-        words[31] = "Randomly";
-        words[32] = "Metaphorically";
-        words[33] = "Blindly";
-        words[34] = "Frantically";
-        words[35] = "Naughtily";
-        words[36] = "Shamelessly";
-        words[37] = "Studiously";
-        words[38] = "Wildly";
-        words[39] = "Vaguely";
+    var verbs = new Array();
+        verbs[0] = "Contemplate";
+        verbs[1] = "Brandish";
+        verbs[2] = "Zip";
+        verbs[3] = "Vanish";
+        verbs[4] = "Itch";
+        verbs[5] = "dangle";
+        verbs[6] = "Resemble";
+        verbs[7] = "Terrorize";
+        verbs[8] = "Escape";
+        verbs[9] = "Fix";
+
+    var nouns = new Array();
+        nouns[0] = "Vortex";
+        nouns[1] = "Meaning";
+        nouns[2] = "Moonlight";
+        nouns[3] = "Event";
+        nouns[4] = "Music";
+        nouns[5] = "Cobweb";
+        nouns[6] = "Hook";
+        nouns[7] = "Feather";
+        nouns[8] = "Wilderness";
+        nouns[9] = "Volcano";
+
+    var adjectives = new Array();
+        adjectives[0] = "Futile";
+        adjectives[1] = "Remarkable";
+        adjectives[2] = "Ridiculous";
+        adjectives[3] = "Fundamental";
+        adjectives[4] = "Scary";
+        adjectives[5] = "Skeptical";
+        adjectives[6] = "Sneaky";
+        adjectives[7] = "Idyllic";
+        adjectives[8] = "Transparent";
+        adjectives[9] = "Uncomfortable";
+
+    var adverbs = new Array();
+        adverbs[0] = "Dramatically";
+        adverbs[1] = "Randomly";
+        adverbs[2] = "Metaphorically";
+        adverbs[3] = "Blindly";
+        adverbs[4] = "Frantically";
+        adverbs[5] = "Naughtily";
+        adverbs[6] = "Shamelessly";
+        adverbs[7] = "Studiously";
+        adverbs[8] = "Wildly";
+        adverbs[9] = "Vaguely";
 
     var quotes = new Array();
         quotes[0] = "You must be the change you wish to see in the world.<br />-Mahatma Gandhi";
@@ -65,7 +71,7 @@
     $('.changeButton').click(function () {
     $('#alert2').addClass('in'); // shows alert with Bootstrap CSS3 implem
     });
-    
+
     $('.close').click(function () {
         prompt = 0;
       $(this).parent().removeClass('in'); // hides alert with Bootstrap CSS3 implem
@@ -96,33 +102,22 @@
 
     function alert1 () {
         $('#alert').addClass('in');
-        $('.helpfulquotes').html("Hello");
+        totalQuotes = 10;
+        $('.helpfulquotes').html(quotes[Math.floor(Math.random() * totalQuotes)]);
+
     }
 
     function alert2 () {
         $('#alert2').addClass('in');
+        totalWords = 10;
+        var words = verbs[Math.floor(Math.random() * totalWords)] + "<br /></br>" + nouns[Math.floor(Math.random() * totalWords)] + "<br /></br>" + adjectives[Math.floor(Math.random() * totalWords)] + "<br /></br>" + adverbs[Math.floor(Math.random() * totalWords)];
+        $('.helpfulwords').html(words);
+        
     }
 
-    
     $(function(){
         //Prompts modal dialog
         $('.publishButton').click(function(){
-                $('.publish-modal').modal();
-            }); //cancel-signup click
-
-        $('.btn-abandon').click(function(){
-            window.location = '/narratives';
-        });
-
+            $('.publish-modal').modal();
+        }); //cancel-signup click
     });
-
-
-
-
-	function ChangeIt() {
-    	var totalCount = 18;
-        var num =  Math.ceil( Math.random() * totalCount );
-        document.body.background = 'https://s3.amazonaws.com/narrativeBlob/images/00'+num+'.jpg';
-        document.body.style.backgroundColor = "black";
-    }
-
