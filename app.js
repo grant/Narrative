@@ -56,7 +56,7 @@ app.post('/api/narrative/add', function (req, res) {
 	});
 });
 
-app.get('*', function (req, res) {
+app.get('/', function (req, res) {
 	res.render('narrative.hbs');
 });
 
