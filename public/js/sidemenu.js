@@ -110,7 +110,7 @@
     function alert2 () {
         $('#alert2').addClass('in');
         totalWords = 10;
-        var words = verbs[Math.floor(Math.random() * totalWords)] + "<br /></br>" + nouns[Math.floor(Math.random() * totalWords)] + "<br /></br>" + adjectives[Math.floor(Math.random() * totalWords)] + "<br /></br>" + adverbs[Math.floor(Math.random() * totalWords)];
+        var words = verbs[Math.floor(Math.random() * totalWords)] + "<br />" + nouns[Math.floor(Math.random() * totalWords)] + "<br />" + adjectives[Math.floor(Math.random() * totalWords)] + "<br />" + adverbs[Math.floor(Math.random() * totalWords)];
         $('.helpfulwords').html(words);
         
     }
