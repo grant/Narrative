@@ -45,7 +45,6 @@ app.post('/api/narrative/add', function (req, res) {
 		datetime: new Date(),
 		viewCount: 0
 	};
-	console.log('going to add narrative');
 
 	var uri = process.env.MONGOLAB_URI || 'mongodb://localhost:27017/mynarrative';
 	MongoClient.connect(uri, function (err, db) {
