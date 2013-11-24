@@ -60,6 +60,7 @@ app.get('/narratives', function (req, res) {
 	var uri = process.env.MONGOLAB_URI || 'mongodb://localhost:27017/mynarrative';
 	MongoClient.connect(uri, function (err, db) {
 		db.collection('narratives').find().toArray(function(err, results) {
+			console.log(results);
 			res.render('narratives.hbs', results);
 	        db.close();
 		});
