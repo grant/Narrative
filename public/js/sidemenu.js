@@ -7,7 +7,7 @@
     });
 
 
-    $('#another-thing-that-opens-an-alert').click(function () {
+    $('.changeButton').click(function () {
     $('#alert2').addClass('in'); // shows alert with Bootstrap CSS3 implem
     });
     
