@@ -93,14 +93,8 @@
         else {
             if ( prompt == 1) {
                 alert1();
-                prompt = 3;
             }
             else if (prompt == 2) {
-                alert2();
-                prompt = 3;
-            }
-            else {
-                alert1();
                 alert2();
             }
         }
@@ -110,7 +104,6 @@
         $('#alert').addClass('in');
         totalQuotes = 10;
         $('.helpfulquotes').html(quotes[Math.floor(Math.random() * totalQuotes)]);
-        $('.imStuckText').html("I'm still stuck");
 
     }
 
@@ -119,7 +112,6 @@
         totalWords = 10;
         var words = verbs[Math.floor(Math.random() * totalWords)] + "<br />" + nouns[Math.floor(Math.random() * totalWords)] + "<br />" + adjectives[Math.floor(Math.random() * totalWords)] + "<br />" + adverbs[Math.floor(Math.random() * totalWords)];
         $('.helpfulwords').html(words);
-        $('.imStuckText').html("I'm still stuck");
         
     }
 
@@ -129,3 +121,5 @@
             $('.publish-modal').modal();
         }); //cancel-signup click
     });
+
+    
