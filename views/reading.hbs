@@ -2,7 +2,13 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="description" content="reading">
+        <meta name="description" content="Narrative. An online writing community that encourages and inspires creative writing.">
+        <meta property="og:title" content="{{title}}" />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="{{fullURL}}" />
+        <meta property="og:description" content="Narrative. An online writing community that encourages and inspires creative writing." />
+        <meta property="og:image" content="https://s3.amazonaws.com/narrativeBlob/thumbs/fb-share.png" />
+        <meta property="og:site_name" content="Narrative" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
         <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
@@ -26,9 +32,11 @@
                         narrative. <!--<img src="img/logo.png" alt="Narrative logo" -->
                     </a>
                 </div>
-                <button type="button" id="navRightButton" class="btn btn-default navbar-right" href="/">
-                <span class="glyphicon glyphicon-pencil" id="glyphAlign"></span><span id="navRightText">Compose</span>
-                </button>
+                <a href="/">
+                    <button type="button" id="navRightButton" class="btn btn-default navbar-right">
+                        <span class="glyphicon glyphicon-pencil" id="glyphAlign"></span><span id="navRightText">Compose</span>
+                    </button>
+                </a>
             </nav>
             <div class="story">
                 <h1>
@@ -43,10 +51,10 @@
                 <p><a id="backLink" href="../narratives"><br />&lt; Back</a>
             </div>
             <div class="butcons">
-                <div class="fb-like" data-href="http://mynarrative.co" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
-                <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://mynarrative.co" data-via="mynarrativeco" data-lang="en">Tweet</a>
+                <div class="fb-like" data-href="{{fullURL}}" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+                <a href="https://twitter.com/share" class="twitter-share-button" data-url="{{fullURL}}" data-via="mynarrativeco" data-lang="en">Tweet</a>
             </div>
-            <div class="fb-comments" data-href="http://www.mynarrative.co" data-numposts="20" data-colorscheme="light"></div>
+            <div class="fb-comments" data-href="{{fullURL}}" data-numposts="20" data-colorscheme="light"></div>
         </div>
     </body>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>

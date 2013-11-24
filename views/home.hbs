@@ -3,12 +3,11 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <meta name="description" content="Narrative">
+        <meta name="description" content="Narrative. An online writing community that encourages and inspires creative writing.">
         <meta property="og:title" content="Narrative" />
         <meta property="og:type" content="article" />
         <meta property="og:url" content="http://mynarrative.co" />
-        <meta property="og:description" content="Narrative. An online writing community
-        that encourages and inspires creative writing" />
+        <meta property="og:description" content="Narrative. An online writing community that encourages and inspires creative writing." />
         <meta property="og:image" content="https://s3.amazonaws.com/narrativeBlob/thumbs/fb-share.png" />
         <meta property="og:site_name" content="Narrative" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,13 +19,13 @@
     <body>
         <div id="fb-root"></div>
         <script>(function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-          fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));</script>
-
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+            fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
         <div class="background2" style="background-image:url('{{imageURL}}')">
             <div class="container">
                 <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -48,7 +47,6 @@
                             <h3>To begin, use the photo and prompt to inspire you.</h3>
                         </div>
                         <!--Prompt Overlay -->
-
                         <h2 class="prompt-style prompt" data-promptid="{{_id}}">{{prompt}}</h2>
                         <div class="article-box" style="width:100%;height:150px;overflow:auto;">
                             <form method="post">
@@ -59,28 +57,25 @@
                         </div>
                         <button type="button" class="btn btn-success btn-lg publishButton" name="publish">Publish</button>
                         <button type="button" class="btn btn-primary btn-lg imStuckText" id="the-thing-that-opens-your-alert" >I'm Stuck</button>
-
-                                <footer role="contentinfo" id="footerBar" class="bs-footer footer-left">
-                                  <div class="container">
-                                    <span class="foot-fb">
+                        <footer role="contentinfo" id="footerBar" class="bs-footer footer-left">
+                            <div class="container">
+                                <span class="foot-fb">
                                     <div class="fb-like" data-href="http://mynarrative.co" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
-                                    </span>
-
-                                    <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://mynarrative.co" data-via="mynarrativeco" data-lang="en">Tweet</a>
-                                    </div>
-                                </foter>
-
+                                </span>
+                                <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://mynarrative.co" data-via="mynarrativeco" data-lang="en">Tweet</a>
+                            </div>
+                        </footer>
                     </div>
                     <div class="col-md-3" style="padding-top:50px;">
                         <div class="box1">
                             <div id="alert" class="alert alert-info fade">
                                 <button href="#" type="button" class="close">&times;</button>
                                 <h3>Words from the wise</h3>
-                                    <ul class="helpfulquotes">
-                                        <li>Roses are red, violets are blue...</li>
-                                        <li>Narrative is the best project at Startup Weekend</li>
-                                        <li>If I had a child, I would name it narrative</li>
-                                    </ul>
+                                <ul class="helpfulquotes">
+                                    <li>Roses are red, violets are blue...</li>
+                                    <li>Narrative is the best project at Startup Weekend</li>
+                                    <li>If I had a child, I would name it narrative</li>
+                                </ul>
                             </div>
                             <!--<div id="alert2" class="alert alert-success fade">
                                 <button href="#" type="button" class="close">&times;</button>
@@ -90,13 +85,13 @@
                             <div id="alert2" class="alert alert-success fade">
                                 <button href="#" type="button" class="close">&times;</button>
                                 <h3>Weave these words into your work</h3>
-                                    <ul class="helpfulwords">
-                                        <li>Enterprise</li>
-                                        <li>Failure</li>
-                                        <li>Amazement</li>
-                                        <li>Gituhub</li>
-                                        <li>Narative</li>
-                                    </ul>
+                                <ul class="helpfulwords">
+                                    <li>Enterprise</li>
+                                    <li>Failure</li>
+                                    <li>Amazement</li>
+                                    <li>Gituhub</li>
+                                    <li>Narative</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -132,8 +127,7 @@
         </div>
         <!-- /.modal -->
         </div>
-
-</div>
+        </div>
     </body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="ckeditor/ckeditor.js"></script>
@@ -144,14 +138,13 @@
     <script src="assets/js/jquery.validate.min.js"></script>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-      ga('create', 'UA-45989520-1', 'mynarrative.co');
-      ga('send', 'pageview');
+        ga('create', 'UA-45989520-1', 'mynarrative.co');
+        ga('send', 'pageview');
 
     </script>
-
 </html>

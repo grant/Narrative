@@ -111,6 +111,7 @@ app.get('/read/:id', function (req, res) {
 		db.collection('narratives').find({promptId: req.params.id}).toArray(function(err, narratives) {
 			var data = narratives[0];
 			data.date = getFormattedDate(data.datetime);
+			data.fullURL = req.protocol + "://" + req.get('host') + req.url;
 			res.render('reading.hbs', data);
 		});
 	});
