@@ -30,8 +30,13 @@ html {
 	padding: 10px;
 } 
 
-button.btn.btn-info {
-	
+button.btn.btn-primary {
+	margin-top: 5px;
+    margin-right: 3px;
+}
+
+button.btn.btn-danger {
+    margin-top: 5px;
 }
 
 h2 {
