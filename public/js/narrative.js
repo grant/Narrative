@@ -6,14 +6,14 @@ $(function() {
 	$('.finalPublishButton').click(function() {
 		var content = CKEDITOR.instances.editable.getData();
 		var postData = {
+			promptId: $('.prompt').data('promptid'),
 			title: $('.titleName').val(),
 			author: $('.authorName').val(),
-			content: content,
-			promptId: 123
+			content: content
 		};
 
 		$.post('api/narrative/add', postData, function() {
-			console.log('publish success');
+            window.location = '/narratives';
 		});
 	});
 });

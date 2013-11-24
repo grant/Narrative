@@ -45,7 +45,6 @@ app.post('/api/narrative/add', function (req, res) {
 		datetime: new Date(),
 		viewCount: 0
 	};
-	console.log('going to add narrative');
 
 	var uri = process.env.MONGOLAB_URI || 'mongodb://localhost:27017/mynarrative';
 	MongoClient.connect(uri, function (err, db) {
@@ -71,8 +70,12 @@ app.get('/narratives', function (req, res) {
 			db.collection('narratives').find().toArray(function(err, narratives) {
 				for (var i in narratives) {
 					var narrative = narratives[i];
-					narrative.prompt = promptMap[narrative.promptId].prompt;
-					narrative.imageURL = promptMap[narrative.promptId].imageURL;
+					if (promptMap[narrative.promptId]) {
+						narrative.prompt = promptMap[narrative.promptId].prompt;
+						narrative.imageURL = promptMap[narrative.promptId].imageURL;
+					} else {
+						delete narrative;
+					}
 				}
 				var data = {narratives: narratives};
 				res.render('narratives.hbs', data);
@@ -94,7 +97,7 @@ app.get('/', function (req, res) {
 			var data = {prompt: randomPrompt};
 			res.render('home.hbs', randomPrompt);
 		});
-	}); 
+	});
 
 	//res.render('home.hbs');
 });
