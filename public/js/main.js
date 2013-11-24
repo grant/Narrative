@@ -8,17 +8,20 @@ $(function() {
 });
 
 function start() {
-	loadDictionary();
+	sendPost();
 }
 
-function loadDictionary() {
-	console.log($);
-	$.ajax({ url: DICTIONARY_FILE}).done(function(data) {
-		var words = data.split('\n');
-		console.log(words);
+function sendPost() {
+	var postData = {
+		author: 'Grant Timmerman',
+		content: 'Hello there',
+		promptId: 123
+	};
+
+	$.post({
+		url: 'api/narrative/add',
+		data: postData
+	}, function() {
+
 	});
-}
-
-function recommendWord(startOfWord) {
-	var recommendedWords = [];
 }

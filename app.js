@@ -56,7 +56,7 @@ app.post('/api/narrative/add', function (req, res) {
 });
 
 app.get('*', function (req, res) {
-	res.sendfile('./views/narrative.html');
+	res.sendfile('narrative.html');
 });
 
 http.createServer(app).listen(app.get('port'), function(){
