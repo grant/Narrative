@@ -54,6 +54,7 @@ app.post('/api/narrative/add', function (req, res) {
 		var collection = db.collection('narratives');
 		collection.insert(doc, function(err, docs) {
 			console.log('inserted narrative');
+			res.send('Good');
 		});
 	});
 });
@@ -73,6 +74,7 @@ app.get('/narratives', function (req, res) {
 					if (promptMap[narrative.promptId]) {
 						narrative.prompt = promptMap[narrative.promptId].prompt;
 						narrative.imageURL = promptMap[narrative.promptId].imageURL;
+						narrative.thumbURL = promptMap[narrative.promptId].imageURL;
 					} else {
 						delete narrative;
 					}
