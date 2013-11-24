@@ -101,8 +101,17 @@ app.get('/', function (req, res) {
 		});
 	});
 
-
 	//res.render('home.hbs');
+});
+
+app.get('/:id', function (req, res) {
+	var uri = process.env.MONGOLAB_URI || 'mongodb://localhost:27017/mynarrative';
+	MongoClient.connect(uri, function (err, db) {
+		db.collection('narratives').find({promptId: req.params.id}).toArray(function(err, narratives) {
+			var data = narratives[0];
+			res.render('reading.hbs', data);
+		});
+	});
 });
 
 http.createServer(app).listen(app.get('port'), function(){
