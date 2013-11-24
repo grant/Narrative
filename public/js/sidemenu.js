@@ -4,7 +4,7 @@
     });
 
     $('.close').click(function () {
-        prompt = 0;
+        //prompt = 0;
       $(this).parent().removeClass('in'); // hides alert with Bootstrap CSS3 implem
     });
 
@@ -73,7 +73,7 @@
     });
 
     $('.close').click(function () {
-        prompt = 0;
+        //prompt = 0;
       $(this).parent().removeClass('in'); // hides alert with Bootstrap CSS3 implem
     });
 
@@ -95,8 +95,14 @@
         else {
             if ( prompt == 1) {
                 alert1();
+                prompt = 3;
             }
             else if (prompt == 2) {
+                alert2();
+                prompt = 3;
+            }
+            else {
+                alert1();
                 alert2();
             }
         }
@@ -106,6 +112,7 @@
         $('#alert').addClass('in');
         totalQuotes = 10;
         $('.helpfulquotes').html(quotes[Math.floor(Math.random() * totalQuotes)]);
+        $('.imStuckText').html("I'm still stuck");
 
     }
 
