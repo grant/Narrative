@@ -7,13 +7,13 @@ body
 {
 	/* Font */
 	font-family: sans-serif, Arial, Verdana, "Trebuchet MS";
-	font-size: 12px;
+	font-size: 16px;
 
 	/* Text color */
 	color: #333;
 
 	/* Remove the background color to make it transparent */
-	background-color: #fff;
+	/*background-color: #fff;*/
 
 	margin: 20px;
 }

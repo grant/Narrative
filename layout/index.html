@@ -6,7 +6,7 @@
                 <meta charset="UTF-8">
                 <meta name="description" content="Narrative">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+                <!-- <link href="assets/css/bootstrap-responsive.css" rel="stylesheet"> -->
                 <title>Narrative</title>
                 <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
                 <link rel="stylesheet" type="text/css" href="css/styles.css">
@@ -14,8 +14,7 @@
                 <script src="ckeditor/config.js"></script>
                 
         </head>
-        <body>
-
+        <body class="background2">
                 <div class="container">                      
                         <nav class="navbar navbar-inverse navbar-fixed-top">
                         <div class="navbar-header">
@@ -31,10 +30,17 @@
                                 <div class="col-md-2"></div>
                                 <div class="col-md-8">
                                     <div class="article-box">
-                                        <img class="pic nomarginall" src="img/pic.jpg" height="400" width="800" alt="temporary picture"> 
-                                        <!--<textarea placeholder="Tell us your story..." rows="30" cols="100"></textarea> -->
                                         <form method="post">
-                                            <p>
+                                            <div id="editable" contenteditable="true">
+                                                <p>The div element that contains this text is now editable.
+                                            </div>
+                                            <script>
+                                                // Turn off automatic editor creation first.
+                                                CKEDITOR.disableAutoInline = true;
+                                                CKEDITOR.inline( 'editable' );
+                                            </script>
+
+                                            <!--<p>
                                                 <textarea id="editor1">Tell us your story...</textarea>
                                                 <script>
                                                     CKEDITOR.replace( 'editor1', {
@@ -45,14 +51,18 @@
                                             <p>
                                                 <input type="submit">
                                             </p>
+                                        -->
                                         </form>
                                     </div> 
                                 </div>
                                 <div class="col-md-2"></div>
                         </div>
+                </div>     
+        <script>
+            var data = CKEDITOR.instances.editable.getData();
 
-                               
-        </body>
+             // Your code to save "data", usually through Ajax.
+        </script>                 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 </html>
