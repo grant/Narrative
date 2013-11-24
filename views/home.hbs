@@ -30,10 +30,13 @@
             <div class="container">
                 <nav class="navbar navbar-inverse navbar-fixed-top">
                     <div class="navbar-header">
-                        <a class="navbar-brand" id="navbarLogo" href="/">
+                        <a class="navbar-brand" id="navbarLogo" href="/narratives">
                             narrative. <!--<img src="img/logo.png" alt="Narrative logo" -->
                         </a>
                     </div>
+                    <button type="button" id="navAboutButton" class="btn btn-default navbar-right">
+                        About
+                    </button>
                 </nav>
             </div>
             <!--3 column grid -->
@@ -44,7 +47,7 @@
                             <h1>Share your story.</h1>
                         </div>
                         <div class="tagline">
-                            <h3>To begin, use the photo and prompt to inspire you.</h3>
+                            <h3>Use the photo and prompt to inspire your narrative.</h3>
                         </div>
                         <!--Prompt Overlay -->
                         <h2 class="prompt-style prompt" data-promptid="{{_id}}">{{prompt}}</h2>
@@ -57,14 +60,14 @@
                         </div>
                         <button type="button" class="btn btn-success btn-lg publishButton" name="publish">Publish</button>
                         <button type="button" class="btn btn-primary btn-lg imStuckText" id="the-thing-that-opens-your-alert" >I'm Stuck</button>
-                        <footer role="contentinfo" id="footerBar" class="bs-footer footer-left">
+                        
                             <div class="container">
                                 <span class="foot-fb">
                                     <div class="fb-like" data-href="http://mynarrative.co" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
                                 </span>
                                 <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://mynarrative.co" data-via="mynarrativeco" data-lang="en">Tweet</a>
                             </div>
-                        </footer>
+ 
                     </div>
                     <div class="col-md-3" style="padding-top:50px;">
                         <div class="box1">

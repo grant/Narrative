@@ -43,6 +43,13 @@ h1, h3 {
     width: 130px;
 }
 
+#navAboutButton {
+    margin-right: 40px;
+    margin-top: 8px;
+    width: 90px;
+    text-align: center;
+}
+
 #navRightText {
     margin-left: 25px;
 }
