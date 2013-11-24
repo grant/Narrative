@@ -25,9 +25,12 @@ CKEDITOR.editorConfig = function( config ) {
 		{ name: 'about' }
 	];
 
-  	config.height = '30px'; 
-  	config.width = '30px';
+	config.resize_minHeight = 100;
+	config.resize_maxHeight = 100;
+
   	config.resize_enabled = false; //false says not resizable
+  	config.disableNativeSpellChecker = false;
+
 
 
 	// The default plugins included in the basic setup define some buttons that
