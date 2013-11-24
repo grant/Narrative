@@ -30,21 +30,17 @@ textarea {
     position: bottom-right;
 }
 
-.pic {
-     height: 400px;
-     min-width: 100px;
-     background-image: url('../img/pic.jpg');
-     background-repeat: no-repeat;
-     background-size: cover;
-     background-position: center;
-     width:100%;
-     position:relative;
-}
-
 .photo {
 
     position: relative;
     margin-top: 0px;
+    height: 400px;
+    min-width: 100px;
+    background-image: url('../img/pic.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width:100%;
 }
 .description {
     background-color: #000000;
