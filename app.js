@@ -57,7 +57,13 @@ app.post('/api/narrative/add', function (req, res) {
 });
 
 app.get('/narratives', function (req, res) {
-	res.render('narratives.hbs');
+	var uri = process.env.MONGOLAB_URI || 'mongodb://localhost:27017/mynarrative';
+	MongoClient.connect(uri, function (err, db) {
+		db.collection('narratives').find().toArray(function(err, results) {
+			res.render('narratives.hbs', results);
+	        db.close();
+		});
+	});
 });
 
 app.get('/reading', function (req, res) {
