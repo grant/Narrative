@@ -71,10 +71,8 @@ app.get('/narratives', function (req, res) {
 					narrative.prompt = promptMap[narrative.promptId].prompt;
 					narrative.imageURL = promptMap[narrative.promptId].imageURL;
 				}
-				console.log(narratives);
 				var data = {narratives: narratives};
 				res.render('narratives.hbs', data);
-				db.close();
 			});
 		});
 	});
@@ -85,7 +83,13 @@ app.get('/reading', function (req, res) {
 });
 
 app.get('/', function (req, res) {
-	res.render('home.hbs');
+	MongoClient.connect(uri, function (err, db) {
+	var promptMap = {};
+	db.collection('prompts').find().toArray(function(err, prompts) {
+		var randomPrompt = prompts[Math.floor(Math.random() * prompts.length)];
+		var data = {prompt: randomPrompt};
+		res.render('home.hbs', randomPrompt);
+	}
 });
 
 http.createServer(app).listen(app.get('port'), function(){

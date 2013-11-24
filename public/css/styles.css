@@ -103,7 +103,7 @@ form {
     width: 100%;
 }
 .description_content_left {
-    margin-left: 5%;
+    /*margin-left: 5%;*/
     padding-top: 5px;
     padding-bottom: 13px;
     text-align: left;
