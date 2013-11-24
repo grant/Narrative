@@ -22,7 +22,7 @@ h1 {
 }
 
 h1, h3 {
-    font-family: 'Georgia';  
+    font-family: 'Georgia';
 }
 
 #backLink {
@@ -50,7 +50,7 @@ h1, h3 {
     margin-left: 0;
     color: #FFF;
     text-shadow: 2px 2px 2px #000;
-    font-family: 'Georgia';  
+    font-family: 'Georgia';
 }
 
 form {
@@ -78,7 +78,6 @@ form {
 
 .container-fluid {
     padding: 0 15px;
-    background-color: #7373FF;
 }
 
 .row {
@@ -107,7 +106,7 @@ form {
     margin-left: 0;
     color: #FFF;
     text-shadow: 2px 2px 2px #000;
-    font-family: 'Georgia'; 
+    font-family: 'Georgia';
 }
 
 .tagline {
@@ -117,7 +116,7 @@ form {
     margin-left: 0;
     color: #FFF;
     text-shadow: 2px 2px 2px #000;
-    font-family: 'Georgia'; 
+    font-family: 'Georgia';
 }
 
 .navbar-header {
