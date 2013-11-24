@@ -15,6 +15,7 @@ var app = express();
 // all environments
 app.set('port', process.env.PORT || 3000);
 app.set('views', __dirname + '/views');
+app.set('view engine', 'hbs');
 
 // Other
 app.configure(function(){
@@ -55,8 +56,8 @@ app.post('/api/narrative/add', function (req, res) {
 	});
 });
 
-app.get('*', function (req, res) {
-	res.sendfile('narrative.html');
+app.get('/', function (req, res) {
+	res.render('narrative.hbs');
 });
 
 http.createServer(app).listen(app.get('port'), function(){

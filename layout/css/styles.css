@@ -23,5 +23,48 @@ textarea {
 }
 
 
+.photo {
 
+    position: relative;
+    margin-top: 0px;
+    height: 400px;
+    min-width: 100px;
+    background-image: url('../img/pic.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width:100%;
+}
+.description {
+    background-color: #000000;
+    bottom: 0px;
+    color: #FFFFFF;
+    font-family: 'Pontano Sans',sans-serif;
+    font-size: 22px;
+    left: 0;
+    opacity: 0.5;
+    padding: 30px;
+    position: absolute;
+    width: 100%;
+}
+.description_content_left {
+    margin-left: 5%;
+    padding-top: 5px;
+    padding-bottom: 13px;
+    text-align: left;
+    position: absolute;
+    bottom: 0px;
+}
+.description_content_right {
+    margin-left: 80%;
+    text-align: right;
+    position: absolute;
+    bottom: 0px;
+}
+
+.middlenav {
+  margin-top:  65px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
 
