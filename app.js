@@ -94,9 +94,9 @@ app.get('/', function (req, res) {
 			var data = {prompt: randomPrompt};
 			res.render('home.hbs', randomPrompt);
 		});
-	});
+	}); 
 
-	// res.render('home.hbs');
+	 //res.render('home.hbs');
 });
 
 http.createServer(app).listen(app.get('port'), function(){
