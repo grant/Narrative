@@ -21,7 +21,7 @@
         if ( num == 1) {
             $('#alert').addClass('in');
         }
-        else {
+        else if (num == 2) {
             $('#alert2').addClass('in');
         }
     });
