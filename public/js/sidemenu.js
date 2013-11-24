@@ -1,4 +1,4 @@
-    $('#the-thing-that-opens-your-alert').click(function () {
+    $('.changeButton2').click(function () {
       $('#alert').addClass('in'); // shows alert with Bootstrap CSS3 implem
     });
     
@@ -13,6 +13,16 @@
     
     $('.close').click(function () {
       $(this).parent().removeClass('in'); // hides alert with Bootstrap CSS3 implem
+    });
+
+    $('#the-thing-that-opens-your-alert').click(function(){
+        var num = Math.ceil(Math.random() * 2);
+        if ( num == 1) {
+            $('#alert').addClass('in');
+        }
+        else {
+            $('#alert2').addClass('in');
+        }
     });
 
 
