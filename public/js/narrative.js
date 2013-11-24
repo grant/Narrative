@@ -13,7 +13,7 @@ $(function() {
 		};
 
 		$.post('api/narrative/add', postData, function() {
-			console.log('publish success');
+            window.location = '/narratives';
 		});
 	});
 });
