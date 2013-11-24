@@ -1,38 +1,43 @@
 /*Stype properties for Narrative creation page.*/
+@font-face { font-family: Calluna; src: url('Calluna.otf'); }
+@font-face { font-family: Georgia}
+
+
 html, body {
     height: 100%;
+    font-family: 'Georgia';
 }
 
 body {
     /*transition: background-image 1s ease-in-out;*/
 }
 
-@font-face { font-family: Calluna; src: url('Calluna.otf'); }
-
 button.btn {
     margin-top: 5px;
     margin-right: 3px;
 }
 
+h1, h3 {
+    font-family: 'Georgia';
+}
+
 h2 {
     margin-top: 15%;
     margin-left: 0;
-    font-family: 'Calluna';
-}
-
-p {
-    font-family: 'Calluna';
-    opacity: 1.0;
+    font-family: 'Georgia';
 }
 
 form {
     height: 100%;
 }
 
+.story {
+    margin-top: 10%;
+}
+
 .box1 {
     margin-top: 25%;
     
-}
 
 .background2 {
 	/*background-image: url('../img/mount.jpeg');*/
@@ -49,7 +54,7 @@ form {
 }
 
 .article-box {
-    min-height: 500px;
+    min-height: 300px;
     height: 100%;
 
 	background-color: #FFF;
@@ -58,7 +63,6 @@ form {
 }
 
 .navbar-brand {
-	font-family: 'Calluna';
 	font-size: 23px;
 }
 
