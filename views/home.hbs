@@ -11,6 +11,15 @@
         <link rel="stylesheet" type="text/css" href="css/styles.css">
     </head>
     <body>
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
         <div class="background2" style="background-image:url('{{imageURL}}')">
             <div class="container">
                 <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -34,7 +43,7 @@
                         <!--Prompt Overlay -->
 
                         <h2 class="prompt-style prompt" data-promptid="{{_id}}">{{prompt}}</h2>
-                        <div class="article-box" style="width:100%;height:150px;overflow:scroll;">
+                        <div class="article-box" style="width:100%;height:150px;overflow:auto;">
                             <form method="post">
                                 <div id="editable" contenteditable="true">
                                     <p>...</p>
@@ -109,15 +118,11 @@
 
         <footer role="contentinfo" class="bs-footer">
               <div class="container">
-                <span class="foot-about">
-                    <a href="#">About Us</a>
-                </span>
                 <span class="foot-fb">
-                    <iframe scrolling="no" frameborder="0" allowtransparency="true" class="facebook-btn" style="border:none; overflow:hidden; width:130px; height:20px;" src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fbootsnipp.com&amp;width=130&amp;height=20&amp;colorscheme=light&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;send=true&amp;appId=112989545392380"></iframe>
+                    <div class="fb-like" data-href="http://mynarrative.co" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
                 </span>
-                <span class="foot-twitter">
-                    <iframe scrolling="no" frameborder="0" class="twitter-share-button twitter-count-horizontal" style="width:107; height:20px;" src="https://platform.twitter.com/widgets/tweet_button.html?lang=en&amp;via=bootsnipp&amp;url=http%3A%2F%2Fbootsnipp.com&amp;text=RT%20Design%20elements%20and%20code%20snippets%20for%20%23twbootstrap%20HTML%2FCSS%2FJS%20framework" allowtransparency="true"></iframe>
-                </span>
+
+                <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://mynarrative.co" data-via="mynarrativeco" data-lang="en">Tweet</a>
             </div>
         </footer>
     </body>
@@ -127,4 +132,5 @@
     <script src="js/sidemenu.js"></script>
     <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
     <script src="js/narrative.js"></script>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </html>
