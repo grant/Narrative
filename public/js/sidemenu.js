@@ -15,9 +15,6 @@
       $(this).parent().removeClass('in'); // hides alert with Bootstrap CSS3 implem
     });
 
-    $('.changeButton').click(function() {
-    	ChangeIt();
-    });
 
     
 
