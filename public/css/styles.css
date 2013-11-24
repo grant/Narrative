@@ -16,16 +16,24 @@ button.btn {
     margin-right: 3px;
 }
 
+h1 {
+    font-size: 80px;
+}
+
 h1, h3 {
     font-family: 'Georgia';
+    margin-left: 0;
+    color: #FFF;
+    text-shadow: 2px 2px 2px #000;
+    font-family: 'Georgia';  
 }
 
 .prompt-style {
     margin-top: 10%;
     margin-left: 0;
     color: #FFF;
-    text-shadow: 0px 0px 8px rgba(0, 0, 0, 1);
-    font-family: 'Georgia';
+    text-shadow: 2px 2px 2px #000;
+    font-family: 'Georgia';  
 }
 
 form {
@@ -53,6 +61,7 @@ form {
 
 .container-fluid {
     padding: 0 15px;
+    background-color: #7373FF;
 }
 
 .row {
@@ -70,6 +79,18 @@ form {
 .navbar-brand {
     font-family: 'Calluna';
 	font-size: 23px;
+}
+
+.intro {
+    margin-top: 7%;
+    margin-bottom: 0px;
+    padding-bottom: 0;
+    font-size: 80px;
+}
+
+.tagline {
+    margin-top: -20px;
+    padding-top: 0;
 }
 
 .navbar-header {
