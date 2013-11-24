@@ -103,6 +103,8 @@ p {
 
 .lowerright {
     margin-top: 11%;
+}
 
-
+.formControl {
+    height: 500px;
 }
