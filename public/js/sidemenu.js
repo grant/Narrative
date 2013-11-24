@@ -96,7 +96,7 @@
 
     function alert1 () {
         $('#alert').addClass('in');
-        $('.helpfulquotes');
+        $('.helpfulquotes').html("Hello");
     }
 
     function alert2 () {
