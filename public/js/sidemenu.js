@@ -47,7 +47,7 @@
             }); //cancel-signup click
 
         $('.btn-abandon').click(function(){
-            window.location = 'http://mynarrative.co/narratives';
-        }); //Redirects to Google
+            window.location = '/narratives';
+        });
 
     });
