@@ -114,6 +114,9 @@ app.get('/read/:id', function (req, res) {
 			data.fullURL = req.protocol + "://" + req.get('host') + req.url;
 			res.render('reading.hbs', data);
 		});
+		// db.collection('narratives').find({_id: "529269cf553caec9215c19bd"}).toArray(function(err, narratives) {
+		// 	console.log('hi');
+		// });
 	});
 });
 
