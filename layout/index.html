@@ -31,7 +31,16 @@
                                 <div class="col-md-8">
                                     <div class="article-box">
                                         <form method="post">
-                                            <p>
+                                            <div id="editable" contenteditable="true">
+                                                <p>The div element that contains this text is now editable.
+                                            </div>
+                                            <script>
+                                                // Turn off automatic editor creation first.
+                                                CKEDITOR.disableAutoInline = true;
+                                                CKEDITOR.inline( 'editable' );
+                                            </script>
+
+                                            <!--<p>
                                                 <textarea id="editor1">Tell us your story...</textarea>
                                                 <script>
                                                     CKEDITOR.replace( 'editor1', {
@@ -42,12 +51,18 @@
                                             <p>
                                                 <input type="submit">
                                             </p>
+                                        -->
                                         </form>
                                     </div> 
                                 </div>
                                 <div class="col-md-2"></div>
                         </div>
-                </div>                      
+                </div>     
+        <script>
+            var data = CKEDITOR.instances.editable.getData();
+
+             // Your code to save "data", usually through Ajax.
+        </script>                 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 </html>
