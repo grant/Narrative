@@ -3,6 +3,10 @@ html, body {
     height: 100%;
 }
 
+body {
+    /*transition: background-image 1s ease-in-out;*/
+}
+
 @font-face { font-family: Calluna; src: url('Calluna.otf'); }
 
 button.btn {

@@ -20,9 +20,9 @@
     });
 
 	function ChangeIt() {
-    	var totalCount = 0;
+    	var totalCount = 18;
         var num =  Math.ceil( Math.random() * totalCount );
-        document.body.background = '../img/cover/009'+'.jpg';
+        document.body.background = '../img/cover/00'+num+'.jpg';
         document.body.style.backgroundColor = "black";
     }
 
