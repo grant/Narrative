@@ -36,9 +36,8 @@
                 <button type="button" class="btn btn-primary btn-lg" id="the-thing-that-opens-your-alert" >I'm Stuck</button>
                 <button type="button" class="btn btn-alert btn-lg changeButton" id="another-thing-that-opens-an-alert">Show me a Picture</button>
             </div>
-            <div class="col-md-4"></div>
             <div class="col-md-3">
-                <div class="box1">
+               <div class="box1">
                     <div id="alert" class="alert alert-info fade">
                       <button href="#" type="button" class="close">&times;</button>
                       <h3>Here are some quotes to help you along...</h3>
@@ -47,7 +46,7 @@
                       <p>Narrative is the best project at Startup Weekend</p>
                       <p>If I had a child, I would name it narrative</p>
                     </div>
-                </div>
+
 
                 <div id="alert2" class="alert alert-success fade">
                     <button href="#" type="button" class="close">&times;</button>
@@ -57,8 +56,38 @@
             </div>
         </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
+    <div class="modal fade publish-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Share your story with the world.</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label" for="first-name">Title</label>
+                        <div class="col-lg-5">
+                            <input type="text" class="form-control" name="title" id="title" placeholder="Name your story" required>
+                        </div>
+
+                        <label class="col-lg-2 control-label" for="first-name">Name</label>
+                        <div class="col-lg-5">
+                            <input type="text" class="form-control" name="name" id="name" placeholder="Sign your work" required>
+                        </div>
+
+                    </div>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">No, Go Back to Signup Form</button>
+                    <button type="button" class="btn btn-primary btn-abandon">Yes, Get Me Out of Here!</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="ckeditor/ckeditor.js"></script>
     <script src="ckeditor/config.js"></script>
     <script src="js/sidemenu.js"></script>
