@@ -96,7 +96,7 @@ app.get('/', function (req, res) {
 		});
 	});
 
-	// res.render('home.hbs');
+	//res.render('home.hbs');
 });
 
 http.createServer(app).listen(app.get('port'), function(){
