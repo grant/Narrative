@@ -76,6 +76,7 @@ app.get('/narratives', function (req, res) {
 						narrative.imageURL = promptMap[narrative.promptId].imageURL;
 						narrative.thumbURL = promptMap[narrative.promptId].imageURL;
 						narrative.date = getFormattedDate(narrative.datetime);
+						narrative.id = narrative._id;
 					} else {
 						delete narrative;
 					}
@@ -108,12 +109,23 @@ app.get('/about', function (req, res) {
 app.get('/read/:id', function (req, res) {
 	var uri = process.env.MONGOLAB_URI || 'mongodb://localhost:27017/mynarrative';
 	MongoClient.connect(uri, function (err, db) {
-		db.collection('narratives').find({promptId: req.params.id}).toArray(function(err, narratives) {
+		var BSON = mongo.BSONPure;
+		var narrativeId = new BSON.ObjectID(req.params.id);
+		db.collection('narratives').find({_id: narrativeId}).toArray(function(err, narratives) {
 			var data = narratives[0];
 			data.date = getFormattedDate(data.datetime);
 			data.fullURL = req.protocol + "://" + req.get('host') + req.url;
-			res.render('reading.hbs', data);
+
+			var BSON = mongo.BSONPure;
+			var promptId = new BSON.ObjectID(data.promptId);
+			db.collection('prompts').find({_id: promptId}).toArray(function(err, prompts) {
+				data.prompt = prompts[0].prompt;
+				res.render('reading.hbs', data);
+			});
 		});
+		// db.collection('narratives').find({_id: "529269cf553caec9215c19bd"}).toArray(function(err, narratives) {
+		// 	console.log('hi');
+		// });
 	});
 });
 

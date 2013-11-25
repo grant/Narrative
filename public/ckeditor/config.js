@@ -25,11 +25,13 @@ CKEDITOR.editorConfig = function( config ) {
 		{ name: 'about' }
 	];
 
-	config.resize_minHeight = 100;
-	config.resize_maxHeight = 100;
+	config.height = '300px';
+	config.resize_minHeight = 300;
+	// config.resize_maxHeight = 100;
 
   	config.resize_enabled = false; //false says not resizable
   	config.disableNativeSpellChecker = false;
+
 
 
 
