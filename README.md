@@ -30,9 +30,30 @@ For more info, visit [http://mynarrative.co/](http://mynarrative.co/)
 
 ##How to Install
 1. Install dependencies (above)
-2. $ npm install (this installs all website dependencies like Express and Handlebars)
+2. $ ```npm install``` (this installs all website dependencies like Express and Handlebars)
 
 ##How to Run
-1. $ node app (Starts server)
-2. $ mongod (Stars mongodb locally)
-3. Open the website at [0.0.0.0:3000](0.0.0.0:3000)
+1. Open two terminal shells, one for each command (node app, mongod)
+2. In each shell, go to the root of the github repo.
+3. $ ```node app``` (Starts server)
+4. $ ```mongod``` (Starts mongodb locally)
+5. Open the website at [0.0.0.0:3000](0.0.0.0:3000)
+6. Note: When running locally, you probably won't see anything because you probably don't have any records in your database. Look below how to fix that.
+
+##How to add example records/prompts
+* In another shell, run ```mongo```. This is your cli for mongodb
+* The local database is called ```mynarrative```. Switch to it with ```use mynarrative```.
+* The collections we will use are ```narratives``` and ```prompts```.
+* To see records in the collections type ```db.narratives.find()```.
+* To add an example prompt, type
+
+<pre>
+  db.prompts.insert({
+      "imageURL": "https://s3.amazonaws.com/narrativeBlob/images/001.jpg",
+      "thumbURL": "https://s3.amazonaws.com/narrativeBlob/thumbs/001_thumb.png",
+      "description": "kid with helmet",
+      "prompt": "When I grow up I…"
+  })
+</pre>
+
+* To remove everything from a collection, type ```db.narratives.remove()```
