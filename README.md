@@ -8,11 +8,11 @@ For more info, visit [http://mynarrative.co/](http://mynarrative.co/)
 ##Properties that point to this website
 * [mynarrative.co/](http://mynarrative.co/)
 * [www.mynarrative.co/](http://www.mynarrative.co/)
-* [mynarrative.herokuapp.com](mynarrative.herokuapp.com)
-* [mynarrative.github.io](mynarrative.github.io)
+* [mynarrative.herokuapp.com](http://mynarrative.herokuapp.com)
+* [mynarrative.github.io](http://mynarrative.github.io)
 
 ##Technology Used
-* [heroku.com](Heroku)
+* [Heroku](http://heroku.com)
 * MongoDb + Mongolab
 * Node + Express
 * JS
