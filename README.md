@@ -57,3 +57,6 @@ For more info, visit [http://mynarrative.co/](http://mynarrative.co/)
 </pre>
 
 * To remove everything from a collection, type ```db.narratives.remove()```
+
+##How to push to heroku
+* ```git push heroku master```
