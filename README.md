@@ -3,7 +3,7 @@ Narrative
 
 Creative Writing for Creatives
 
-For more info, visit [http://mynarrative.co/](http://mynarrative.co/)
+For more info, visit [http://www.mynarrative.co/about](http://www.mynarrative.co/about)
 
 ##Properties that point to this website
 * [mynarrative.co/](http://mynarrative.co/)
