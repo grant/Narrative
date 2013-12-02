@@ -1,4 +1,4 @@
-Narrative
+[Narrative](http://www.mynarrative.co)
 =========
 
 Creative Writing for Creatives
