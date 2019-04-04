@@ -18,7 +18,8 @@
   "dependencies": {
     "express": "= 3.4.0",
     "mongodb": "^2.2.33",
-    "hbs": ">= 2.4.0"
+    "hbs": ">= 2.4.0",
+    "jquery-validation": "^1.19.0"
   },
   "engine": ">= 0.10.18",
   "license": "MIT"
